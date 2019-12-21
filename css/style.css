@@ -18,12 +18,11 @@ body {
     display: inline-block;
 }
 
-.dropdown-content {
-    color: #ffffff;
+.dropdown .dropdown-content {
     display: none;
     position: absolute;
     background-color: #262729;
-    min-width: max-content;
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
     padding: 12px 16px;
     z-index: 1;
@@ -32,6 +31,22 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.dropdown-content p:hover{
+    transition: all 0.5s;
+    background-color: #455470;
+}
+.dropdown .dropdown-content p a{
+    color: rgb(241, 169, 75);
+    display: inline-block;
+    width: 100%;
+    line-height: 2em;
+    padding: 0px;
+    text-decoration: none;
+}
+
+
+/* doopdown for main menu */
 .dropdown-content-menu {
     color: rgb(241, 169, 75);
     display: none;
@@ -47,10 +62,18 @@ body {
     display: block;
 }
 
-.dropdown .dropdown-content-menu p a{
+.dropdown .dropdown-content-menu p:hover {
+    transition: all 0.5s;
+    background-color: #455470;
+}
+
+.dropdown .dropdown-content-menu p a {
+    display: inline-block;
+    width: 100%;
     color: rgb(241, 169, 75);
     line-height: 2em;
     padding: 10px;
+    text-decoration: none;
 }
 
 header {
@@ -64,22 +87,25 @@ header {
     align-items: center;
     text-align: center;
     color: rgb(231, 177, 107);
-    background:linear-gradient(180deg, rgba(38,39,41,1) 0%, rgba(38,39,41,0.9500175070028011) 87%, rgba(38, 39, 41, 0.5) 95%,rgba(38, 39, 41, 0) 100%);
+    background: linear-gradient(180deg, rgba(38, 39, 41, 1) 0%, rgba(38, 39, 41, 0.9500175070028011) 87%, rgba(38, 39, 41, 0.5) 95%, rgba(38, 39, 41, 0) 100%);
 }
-header .center h2{
+
+header .center h2 {
     font-size: 1em;
 }
-header .center h2 a{
+
+header .center h2 a {
     text-decoration: none;
     color: rgb(231, 177, 107);
     font-size: 1.2em;
 }
 
-header .cartlogo{
+header .cartlogo {
     align-self: flex-end;
     color: #ffffff;
 }
- /* hear\der end */
+
+/* hear\der end */
 
 .viewarea {
     margin: 0;
@@ -167,17 +193,19 @@ header .cartlogo{
 .container .box:hover .content {
     transform: translateY(-90px);
 }
-.container .box .content h2{
+
+.container .box .content h2 {
     color: rgb(241, 169, 75);
 
 }
-.container .box .content p{
+
+.container .box .content p {
     font-size: small;
     color: rgb(236, 205, 163);
 
 }
 
-.container .box .content a{
+.container .box .content a {
     margin-top: 3px;
     padding: 2px 10px;
     font-size: 15px;
@@ -188,28 +216,31 @@ header .cartlogo{
     border-radius: 5px;
     transition: all 0.5s;
 }
-.container .box .content a:hover{
+
+.container .box .content a:hover {
     background-color: #262729e7;
     color: rgb(241, 169, 75);
 
 }
 
 /* home page ends here */
-.container3{
+.container3 {
     margin: 0 auto;
     padding-top: 30px;
     width: 90vw;
     position: relative;
     display: grid;
-    grid-template-columns: 20vw auto;    
+    grid-template-columns: 20vw auto;
     justify-content: space-between;
     align-items: center;
 }
-.container3 h1{
+
+.container3 h1 {
     color: rgb(241, 169, 75);
     padding: 10px;
 }
-.aboutus{
+
+.aboutus {
     color: rgb(223, 181, 128);
 }
 
@@ -243,14 +274,17 @@ header .cartlogo{
     z-index: 1;
     transform: translateY(100px)
 }
-.container2 .card:hover .face.face1{
+
+.container2 .card:hover .face.face1 {
     background: rgb(199, 20, 80);
     transform: translateY(0)
 }
+
 .container2 .card .face.face1 .content {
     opacity: 0.8;
     transition: 0.5s;
 }
+
 .container2 .card:hover .face.face1 .content {
     opacity: 1;
 }
@@ -260,6 +294,7 @@ header .cartlogo{
     display: inline-block;
     transition: 0.5s;
 }
+
 .container2 .card:hover .face.face1 .content img {
     max-width: 100px;
 }
@@ -283,7 +318,8 @@ header .cartlogo{
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     transform: translateY(-100px)
 }
-.container2 .card:hover .face.face2{
+
+.container2 .card:hover .face.face2 {
     transform: translateY(0);
 }
 
@@ -313,7 +349,7 @@ header .cartlogo{
     color: #fff;
 }
 
-.last{
+.last {
     height: 50px;
 }
 
@@ -326,28 +362,31 @@ header .cartlogo{
         overflow: hidden;
         transition: 0.5s all;
     }
-    .container .box:last-child  {
+
+    .container .box:last-child {
         width: 100%;
         height: 50vh;
     }
-    
+
     .container .box .imagebox::before {
         background: linear-gradient(180deg, #262729b7, #262729d0, #262729ab);
         opacity: 1;
         transition: 0.5s;
     }
-    
+
     .container .box:hover .imagebox::before {
         background: linear-gradient(180deg, #2627296b, #26272965, #26272967);
     }
-    
-  }
+
+}
+
 @media only screen and (max-width: 450px) {
-    header .center h2 a{
+    header .center h2 a {
         text-decoration: none;
         color: rgb(231, 177, 107);
         font-size: 20px;
     }
+
     .container .box {
         position: relative;
         width: 100%;
@@ -355,19 +394,20 @@ header .cartlogo{
         overflow: hidden;
         transition: 0.5s all;
     }
-    .container .box:last-child  {
+
+    .container .box:last-child {
         width: 100%;
         height: 50vh;
     }
-    
+
     .container .box .imagebox::before {
         background: linear-gradient(180deg, #262729b7, #262729d0, #262729ab);
         opacity: 1;
         transition: 0.5s;
     }
-    
+
     .container .box:hover .imagebox::before {
         background: linear-gradient(180deg, #2627296b, #26272965, #26272967);
     }
-    
-  }
+
+}
